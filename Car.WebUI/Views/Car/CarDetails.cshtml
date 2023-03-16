@@ -1,0 +1,47 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model ArabaDto
+<head>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="~/css/site.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 bg-primary p-2 text-white mt-2 text-center text-capitalize">
+                product details page with nav-pills
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-lg-1 text-center">
+                <ul class="nav nav-tabs row text-center pro-details" id="myTab" role="tablist">
+                    <li class="nav-item col-lg-12 mb-2">
+                        <img class="img-fluid active h-100" src="@Model.Resim" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true" />
+                    </li>
+                </ul>
+            </div>
+           
+            <div class="col-lg-7">
+                <h5>
+                    @Model.Marka
+                </h5>
+                <h3>
+                    @Model.Model
+                </h3>
+                <p>
+                   @Model.Renk
+                </p>
+                <ul>
+                    <li class="pb-2"><b>@Model.HasarDurumu</b> 5% Unlimited Cashback on  Bank Credit Card <b>T&C</b></li>
+                    <li><b>Bank Offer</b>@Model.Yil<b>T&C</b></li>
+                </ul>
+                <a class="btn btn-danger" href="/Car/CarDelete/@Model.Id">Sil</a>
+            </div>
+        </div>
+    </div>
+</body>
